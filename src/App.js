@@ -11,13 +11,6 @@ function App() {
   const [weather, setWeather] = useState({});
   const [instruction, setInstruction] = useState(true)
 
-function display() {
-  if (instruction) {
-    return "Enter location"
-  }
-  return "Location entered"
-}
-
   const search = evt => {
     if (evt.key === "Enter") {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
